@@ -1,0 +1,16 @@
+$phone: '480px';
+.episodes {
+  padding: 0 15px;
+  margin: 20px 0;
+  &__title {
+    margin: 0 0 20px;
+  }
+}
+
+.episode-list {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: $phone) {
+    justify-content: center;
+  }
+}

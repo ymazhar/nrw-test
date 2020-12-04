@@ -1,0 +1,22 @@
+.episode-item {
+  padding: 3px;
+  cursor: pointer;
+  max-width: 250px;
+  &:hover {
+    .episode-item__image {
+      opacity: .3;
+    }
+  }
+  &__image {
+    vertical-align: top;
+    background: darkgrey;
+    transition: opacity ease-in-out .3s;
+    display: block;
+    min-height: 140px;
+    min-width: 250px;
+  }
+  &__name {
+    padding: 5px 0;
+    white-space: pre-wrap;
+  }
+}

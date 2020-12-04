@@ -1,0 +1,24 @@
+$tablet: '767px';
+.tvshow-card {
+  display: flex;
+  padding: 15px;
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    justify-content: center;
+ }
+  &__holder-image {
+    flex-shrink: 0;
+    @media screen and (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+  &__image {
+    display: block;
+    margin: 0 auto;
+    background: darkgrey;
+  }
+  &__desc {
+    padding: 5px 10px;
+  }
+}

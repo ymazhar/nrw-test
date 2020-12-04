@@ -1,0 +1,1 @@
+export { TVShowCard } from './TVShowCard';
