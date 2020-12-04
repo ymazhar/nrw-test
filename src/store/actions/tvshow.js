@@ -12,7 +12,11 @@ export function fetchShowEpisodesList(id) {
 export function fetchShow(id) {
   return (dispatch) => {
     TVShowService.getShow(id)
-      .then((show) => dispatch({ type: GET_SHOW, payload: show }))
+      .then((show) => {
+        const { name, image, summary } = show;
+
+        return dispatch({ type: GET_SHOW, payload: { id, name, image, summary } });
+      })
       .catch((error) => console.error(error));
   };
 }
