@@ -19,7 +19,6 @@
     }
   },
   "rules": {
-//    "no-console": "error",
     "camelcase": ["error", { "allow": ["_id$"] }],
     "padding-line-between-statements": [
       "error",
