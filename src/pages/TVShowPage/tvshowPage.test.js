@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { render, screen, act } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import { EpisodeList } from '../../shared/EpisodeList';
 import { TVShowCard } from '../../shared/TVShow-card';
 
@@ -44,8 +44,6 @@ describe('TvShowPage', () => {
     await act(() => promise);
 
     expect(getAllByRole('listitem')).toHaveLength(2);
-
-    screen.debug();
   });
 
   it('renders tv show card', async () => {
@@ -58,7 +56,5 @@ describe('TvShowPage', () => {
 
     expect(getByText(/description for tv show card/i)).toBeInTheDocument();
     expect(getByAltText(/the powerpuff girls/i)).toBeInTheDocument();
-
-    screen.debug();
   });
 });
