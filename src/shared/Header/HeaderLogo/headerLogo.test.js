@@ -17,7 +17,6 @@ describe('header-logo', () => {
     const linkTo = getByTestId('linkTo');
 
     fireEvent.click(linkTo);
-    screen.debug();
     expect(history.location.pathname).toBe(route);
   });
 });
