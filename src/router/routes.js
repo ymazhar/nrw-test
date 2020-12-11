@@ -8,7 +8,9 @@ const EpisodeDetailPage = lazy(() => import('../pages/EpisodeDetailPage'));
 export const Routes = () => (
   <Suspense fallback={<div>Loading...</div>}>
     <Switch>
-      <Redirect exact from="/" to={root} />
+      <Route path="/" exact>
+        <Redirect to="/shows/6771" />
+      </Route>
       <Route path={root} component={TvShowPage} />
       <Route path={episodes} component={EpisodeDetailPage} />
     </Switch>
